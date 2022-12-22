@@ -10,10 +10,6 @@ string[] userArray = FillArray(userNum);   // заполняем массив п
 
 string[] finalArray = DeleteLongElements(userArray, 3);   // Через метод создаем новый массив с элементами длиной не более 3 символов
 
-//PrintArray(userArray);   // выводим на экран получившийся массив
-//Console.Write(" -> ");
-//PrintArray(finalArray);
-
 Console.WriteLine($"{String.Join(" ", userArray)}  -> {String.Join(" ", finalArray)}");
 
 // метод для заполнения массива длиной n пользовательскими значениями
@@ -24,7 +20,6 @@ string[] FillArray(int n)
     for (int i = 0; i < n; i++) filledArray[i] = Console.ReadLine() ?? "";    
     return filledArray;
 }
-
 
 // метод для получения нового массива, содержащего элементы исходного массива длиной не более трех символов
 string[] DeleteLongElements(string[] inArray, int num)
@@ -46,8 +41,3 @@ string[] DeleteLongElements(string[] inArray, int num)
     return resultArray;
 }
 
-/* void PrintArray(string[] inArray)
-{
-    for (int i = 0; i < inArray.Length; i++)
-        Console.Write($"{inArray[i]} ");
-} */
