@@ -6,21 +6,26 @@ Console.Clear();
 Console.Write("Сколько элементов вы хотите проверить? Введите целое число и нажмите enter: ");
 int userNum = int.Parse(Console.ReadLine() ?? "");   // запрашиваем у пользователя, сколько элементов он хочет ввести
 
-int[] userArray = FillArray(userNum);   // заполняем массив пользовательскими значениями через вызов метода
+string[] userArray = FillArray(userNum);   // заполняем массив пользовательскими значениями через вызов метода
 
-int[] finalArray = DeleteLongElements(userArray, 3)
+string[] finalArray = DeleteLongElements(userArray, 3);
 
-Console.WriteLine(finalArray)
+Console.WriteLine(finalArray);
 
 // метод для заполнения массива длиной n пользовательскими значениями
-int[] FillArray(int n)
+string[] FillArray(int n)
 {
-
+    string[] filledArray = new string[n];
+    for (int i = 0; i < n; i++)
+    {
+        filledArray[i] = Console.ReadLine() ?? "";
+    }
+    return filledArray;
 }
 
 
 // метод для получения нового массива, содержащего элементы исходного массива длиной не более трех символов
-int[] DeleteLongElements(inArray, num)
+string[] DeleteLongElements(string[] inArray, int num)
 {
 
 }
